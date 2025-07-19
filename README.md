@@ -1,48 +1,51 @@
 # 🫁 Lung Nodule Detection AI
 
-![Version](https://img.shields.io/badge/version-2.0%20Amélioré-blue)
+![Version](https://img.shields.io/badge/version-2.0%20Advanced-blue)
 ![Python](https://img.shields.io/badge/python-3.9-green)
 ![Deep Learning](https://img.shields.io/badge/deep%20learning-PyTorch-orange)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 ## 📋 Description
 
-Un système d'intelligence artificielle basé sur Faster R-CNN pour la détection automatique de nodules pulmonaires dans les images CT (tomodensitométrie). Ce projet utilise des techniques avancées de deep learning pour identifier avec précision les nodules pulmonaires, qui peuvent être des indicateurs précoces de cancer du poumon.
+An artificial intelligence system based on Faster R-CNN for automatic detection of lung nodules in CT (computed tomography) images. This project uses advanced deep learning techniques to accurately identify lung nodules, which can be early indicators of lung cancer.
 
-## 🖼️ Démonstration
+## 🖼️ Demonstration
 
-### Interface utilisateur
-![Interface principale](web/test_images/apercu_images_test.png)
-*Interface principale de l'application web avec ajustement du seuil de confiance*
+### User Interface
+![Main Interface](web/test_images/apercu_images_test.png)
+*Main web application interface with confidence threshold adjustment*
 
-### Exemple de détection
-![Exemple de détection](test_images_streamlit/test_02_9_jpg.rf.6c2fe24736498530f0d421b484c0b2b7.png)
-*Détection d'un nodule pulmonaire avec marquage et niveau de confiance*
+### Detection Examples
+![Detection Example 1](web/test_images/scan_avec_nodule_2.jpg)
+*Detection of lung nodules with marking and confidence level*
 
-### Métriques de performance
-![Métriques de performance](results/validation/detection_metrics.png)
-*Graphiques des métriques de précision et rappel selon différents seuils de confiance*
+![Detection Example 2](web/test_images/scan_avec_nodules_1.jpg)
+*Multiple nodule detection with confidence scoring*
 
-## 🚀 Performance du modèle
+### Performance Metrics
+![Performance Metrics](results/validation/detection_metrics.png)
+*Charts of precision and recall metrics at different confidence thresholds*
+
+## 🚀 Model Performance
 
 - **F1-Score**: 82.1%
-- **Précision**: 76.5%
-- **Rappel**: 88.6%
+- **Precision**: 76.5%
+- **Recall**: 88.6%
 - **Grade**: A+ (98.5%)
-- **Seuil de confiance optimal**: 0.70
+- **Optimal confidence threshold**: 0.70
 
-## 🗂️ Structure du projet
+## 🗂️ Project Structure
 
 ```
 ai-lung-nodule-detection-fastrcnn/
-├── data/                   # Données d'entraînement et validation
-│   ├── annotations/        # Annotations des nodules (format JSON)
-│   ├── processed/          # Images prétraitées
-│   └── raw/                # Images CT brutes (non incluses dans le repo)
-├── models/                 # Modèles entraînés
-│   ├── improved/           # Modèles améliorés avec métriques
-│   └── README.md           # Instructions pour télécharger les modèles
-├── notebooks/              # Notebooks Jupyter pour l'analyse et l'entraînement
+├── data/                   # Training and validation data
+│   ├── annotations/        # Nodule annotations (JSON format)
+│   ├── processed/          # Preprocessed images
+│   └── raw/                # Raw CT images (not included in repo)
+├── models/                 # Trained models
+│   ├── improved/           # Improved models with metrics
+│   └── README.md           # Instructions for downloading models
+├── notebooks/              # Jupyter notebooks for analysis and training
 │   ├── 01_data_exploration.ipynb
 │   ├── 02_data_preprocessing.ipynb
 │   ├── 03_model_training.ipynb
@@ -50,107 +53,107 @@ ai-lung-nodule-detection-fastrcnn/
 │   ├── 05_model_validation.ipynb
 │   ├── 06_web_interface.ipynb
 │   └── 07_model_improvement.ipynb
-├── results/                # Résultats d'évaluation
-│   └── validation/         # Rapports de validation et métriques
-├── web/                    # Interface web Streamlit
-│   ├── lung_detection_app.py  # Application principale
-│   └── test_images/        # Images de test pour la démonstration
-└── requirements.txt        # Dépendances du projet
+├── results/                # Evaluation results
+│   └── validation/         # Validation reports and metrics
+├── web/                    # Streamlit web interface
+│   ├── lung_detection_app.py  # Main application
+│   └── test_images/        # Test images for demonstration
+└── requirements.txt        # Project dependencies
 ```
 
 ## 💻 Installation
 
-### Prérequis
+### Prerequisites
 - Python 3.9+
-- CUDA compatible GPU (recommandé pour l'inférence rapide)
+- CUDA compatible GPU (recommended for fast inference)
 
-### Configuration
+### Setup
 
-1. Cloner le repository
+1. Clone the repository
 ```bash
-git clone https://github.com/votre-username/ai-lung-nodule-detection-fastrcnn.git
+git clone https://github.com/abchate/ai-lung-nodule-detection-fastrcnn.git
 cd ai-lung-nodule-detection-fastrcnn
 ```
 
-2. Créer un environnement virtuel
+2. Create a virtual environment
 ```bash
 python -m venv venv
-source venv/bin/activate  # Sur Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Installer les dépendances
+3. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Télécharger les modèles pré-entraînés
+4. Download pre-trained models
 
-Les fichiers de modèles (.pth) ne sont pas inclus dans ce dépôt en raison de leur taille. Vous pouvez les télécharger via ce lien:
-[Télécharger les modèles pré-entraînés](https://huggingface.co/models/your-username/lung-nodule-detection)
+Model files (.pth) are not included in this repository due to their size. You can download them via this link:
+[Download pre-trained models](https://huggingface.co/models/abchate/lung-nodule-detection)
 
-Placez les fichiers téléchargés dans le répertoire `models/improved/`.
+Place the downloaded files in the `models/improved/` directory.
 
-## 🔧 Utilisation
+## 🔧 Usage
 
-### Interface web
+### Web Interface
 
-L'interface web permet une utilisation simple et intuitive du modèle:
+The web interface allows for simple and intuitive use of the model:
 
 ```bash
 cd web
 streamlit run lung_detection_app.py
 ```
 
-L'application sera accessible à l'adresse: http://localhost:8501
+The application will be accessible at: http://localhost:8501
 
-### Utilisation via notebooks
+### Using via Notebooks
 
-Les notebooks Jupyter dans le dossier `notebooks/` fournissent des exemples détaillés pour:
-- Explorer les données
-- Prétraiter les images CT
-- Entraîner le modèle Faster R-CNN
-- Effectuer des inférences
-- Valider les performances
-- Améliorer le modèle
+The Jupyter notebooks in the `notebooks/` folder provide detailed examples for:
+- Exploring the data
+- Preprocessing CT images
+- Training the Faster R-CNN model
+- Performing inference
+- Validating performance
+- Improving the model
 
-## 🧠 Architecture du modèle
+## 🧠 Model Architecture
 
-Ce projet utilise un modèle Faster R-CNN avec backbone ResNet-50 FPN (Feature Pyramid Network), adapté pour la détection d'objets de tailles variées. L'architecture a été optimisée pour détecter des nodules pulmonaires qui peuvent être très petits et subtils dans les images CT.
+This project uses a Faster R-CNN model with ResNet-50 FPN (Feature Pyramid Network) backbone, adapted for detecting objects of various sizes. The architecture has been optimized to detect lung nodules that can be very small and subtle in CT images.
 
-Caractéristiques principales:
+Key features:
 - Backbone: ResNet-50
-- Taille d'image d'entrée: 640×640 pixels
-- Classes: 2 (nodule, arrière-plan)
-- Augmentation de données: rotations, zoom, modifications de contraste
+- Input image size: 640×640 pixels
+- Classes: 2 (nodule, background)
+- Data augmentation: rotations, zoom, contrast modifications
 
-## 📊 Évaluation et métriques
+## 📊 Evaluation and Metrics
 
-Les performances du modèle ont été évaluées sur un ensemble de données de validation indépendant. Les métriques clés incluent:
+The model's performance was evaluated on an independent validation dataset. Key metrics include:
 
-- **Précision vs. Seuil de confiance**: Mesure la précision des prédictions à différents seuils
-- **Rappel vs. Seuil de confiance**: Évalue la capacité du modèle à détecter tous les nodules
-- **F1-Score vs. Seuil de confiance**: Balance entre précision et rappel
-- **Courbes Précision-Rappel**: Représentation du compromis précision-rappel
+- **Precision vs. Confidence Threshold**: Measures the accuracy of predictions at different thresholds
+- **Recall vs. Confidence Threshold**: Evaluates the model's ability to detect all nodules
+- **F1-Score vs. Confidence Threshold**: Balance between precision and recall
+- **Precision-Recall Curves**: Representation of the precision-recall trade-off
 
-Ces métriques sont disponibles dans le dossier `results/validation/`.
+These metrics are available in the `results/validation/` folder.
 
 ## 📚 Citation
 
-Si vous utilisez ce projet dans votre recherche ou application, veuillez le citer comme suit:
+If you use this project in your research or application, please cite it as follows:
 
 ```
 @software{lung_nodule_detection_ai,
-  author = {Votre Nom},
-  title = {Lung Nodule Detection AI: Fast R-CNN pour la détection automatique de nodules pulmonaires},
+  author = {Your Name},
+  title = {Lung Nodule Detection AI: Fast R-CNN for Automatic Detection of Lung Nodules},
   year = {2025},
-  url = {https://github.com/votre-username/ai-lung-nodule-detection-fastrcnn}
+  url = {https://github.com/abchate/ai-lung-nodule-detection-fastrcnn}
 }
 ```
 
-## 📝 Licence
+## 📝 License
 
-Ce projet est distribué sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+This project is distributed under the MIT license. See the `LICENSE` file for more details.
 
 ## ✉️ Contact
 
-Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue sur ce repository ou à me contacter directement à [votre-email@example.com].
+For any questions or suggestions, feel free to open an issue on this repository or contact me directly at [your-email@example.com].
