@@ -12,15 +12,12 @@ An artificial intelligence system based on Faster R-CNN for automatic detection 
 ## 🖼️ Demonstration
 
 ### User Interface
-![Main Interface](web/test_images/apercu_images_test.png)
+![Main Interface](web/test_images/capture site 1.png)
 *Main web application interface with confidence threshold adjustment*
 
 ### Detection Examples
-![Detection Example 1](web/test_images/scan_avec_nodule_2.jpg)
+![Detection Example 1](web/test_images/capture site 2.png)
 *Detection of lung nodules with marking and confidence level*
-
-![Detection Example 2](web/test_images/scan_avec_nodules_1.jpg)
-*Multiple nodule detection with confidence scoring*
 
 ### Performance Metrics
 ![Performance Metrics](results/validation/detection_metrics.png)
