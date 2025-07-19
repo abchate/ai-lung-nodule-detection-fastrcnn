@@ -1,0 +1,71 @@
+{
+  "config": {
+    "image_size": [
+      640,
+      640
+    ],
+    "num_classes": 2,
+    "normalize_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalize_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "learning_rate": 0.0005,
+    "batch_size": 6,
+    "num_epochs": 15,
+    "weight_decay": 0.0005,
+    "scheduler_step_size": 7,
+    "scheduler_gamma": 0.1,
+    "confidence_threshold": 0.7000000000000002,
+    "nms_threshold": 0.3,
+    "min_detection_area": 100,
+    "augmentation_prob": 0.7,
+    "rotation_limit": 20,
+    "brightness_limit": 0.3,
+    "contrast_limit": 0.3
+  },
+  "train_losses": [
+    0.40539026632905006,
+    0.17186333518475294,
+    0.1853191304951906,
+    0.17338975034654142,
+    0.15943529047071933,
+    0.1626709047704935,
+    0.1672618303447962,
+    0.16182337421923876,
+    0.1605152918025851,
+    0.15768103450536727,
+    0.1549579484388232,
+    0.1496412442997098,
+    0.14618258625268937,
+    0.14557584393769502,
+    0.14589001424610615
+  ],
+  "val_losses": [
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity,
+    Infinity
+  ],
+  "best_val_loss": Infinity,
+  "total_duration_minutes": 130.17197085,
+  "successful_epochs": 15,
+  "total_epochs": 15,
+  "improvement_vs_baseline": "Configuration am\u00e9lior\u00e9e avec 15 \u00e9poques"
+}

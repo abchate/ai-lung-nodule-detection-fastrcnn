@@ -1,0 +1,91 @@
+# Données volumineuses
+data/raw/
+data/processed/*.jpg
+data/processed/*.png
+data/processed/*.jpeg
+
+# Fichiers de modèles et checkpoints
+*.pth
+*.h5
+*.pkl
+*.pt
+*.onnx
+*.tflite
+*.pb
+*.savedmodel
+
+# Environnement virtuel et caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Notebooks
+.ipynb_checkpoints
+.jupyter
+jupyter_execute/
+profile_default/
+ipython_config.py
+
+# Système d'exploitation
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# Logs et rapports
+*.log
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.pytest_cache/
+coverage.html
+coverage.xml
+*.cover
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+
+# Résultats volumineux
+results/*.json
+results/*.csv
+results/large_*
+
+# Ne pas ignorer les fichiers suivants (garder des exemples)
+!data/processed/example_*.jpg
+!data/processed/example_*.png
+!models/README.md
+!data/README.md
