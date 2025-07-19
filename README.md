@@ -12,11 +12,11 @@ An artificial intelligence system based on Faster R-CNN for automatic detection 
 ## 🖼️ Demonstration
 
 ### User Interface
-![Main Interface](web/test_images/capture site 1.png)
+![Main Interface](web/test_images/capture_site_1.png)
 *Main web application interface with confidence threshold adjustment*
 
 ### Detection Examples
-![Detection Example 1](web/test_images/capture site 2.png)
+![Detection Example 1](web/test_images/capture_site_2.png)
 *Detection of lung nodules with marking and confidence level*
 
 ### Performance Metrics
@@ -28,7 +28,6 @@ An artificial intelligence system based on Faster R-CNN for automatic detection 
 - **F1-Score**: 82.1%
 - **Precision**: 76.5%
 - **Recall**: 88.6%
-- **Grade**: A+ (98.5%)
 - **Optimal confidence threshold**: 0.70
 
 ## 🗂️ Project Structure
@@ -140,7 +139,7 @@ If you use this project in your research or application, please cite it as follo
 
 ```
 @software{lung_nodule_detection_ai,
-  author = {Your Name},
+  author = {Abchate Ali Ibrahim},
   title = {Lung Nodule Detection AI: Fast R-CNN for Automatic Detection of Lung Nodules},
   year = {2025},
   url = {https://github.com/abchate/ai-lung-nodule-detection-fastrcnn}
@@ -153,4 +152,4 @@ This project is distributed under the MIT license. See the `LICENSE` file for mo
 
 ## ✉️ Contact
 
-For any questions or suggestions, feel free to open an issue on this repository or contact me directly at [your-email@example.com].
+For any questions or suggestions, feel free to open an issue on this repository or contact me directly at [aliabchate@gmail.com].
